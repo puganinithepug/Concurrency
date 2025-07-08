@@ -1,10 +1,8 @@
 # Concurrency
 Concurrency projects written via Kali Linux subsystem command line. The projects are meant to showcase understanding of parallelism and multithreading. 
-
 These projects were instrumental in shaping my understanding of concurrency and how it is achieved through multithreading. The projects are listed here in order of their completion, Sept - Dec 2024. Each project is matched with an analysis of the output of the programmed deliverable and reflection on the use of different concepts of concurrency.
 
 **Project 1:**
-
 Simulates concurrent drawing of randomly positioned snowmen (three-circle characters) onto a shared image canvas, there are several criteria that must be checked. 
 First of all, the snowmen must not overlap each other.
 In other words, threads should be aware of the activity of their predecessors as well as those threads running simultaneously.  
@@ -67,7 +65,6 @@ _DrawingSnowmenConcurrently.pdf_
 Contains details regarding different test cases showing the input and the resulting output.
 
 **Project 2:**
-
 This project simulates a dynamic version of the classic Snakes and Ladders board game with a focus on concurrent event processing, data traceability, and real-time state mutation. 
 The simulation models a 10x10 grid-based game where three autonomous threads operate in parallel—modifying, observing, and interacting with the game board. 
 ⦁	PlayerThread: Simulates player movements across a boustrophedon (zig-zag) grid using randomized dice rolls.
@@ -90,7 +87,6 @@ _ConcurrentSnakes&Ladders.pdf_
 Contains details regarding different test cases showing the input and the resulting output.
 
 **Project 3:**
-
 The goal of this project is to implement an efficient parallel algorithm for verifying balanced brackets in a character stream using Java’s ExecutorService thread pooling.
 This project explores a concurrent divide-and-conquer strategy, by applying nested matching logic over segments of large bracket strings. It is a simplified contextualization of high-throughput log validation.
 The bracket matching problem ensures that every opening bracket ('[') is matched with a  closing bracket (']') with valid nesting. 
@@ -123,7 +119,6 @@ _BracketCounter.pdf_
 Contains details regarding different test cases showing the input and the resulting output.
 
 **Project 4:**
-
 The goal of this project is to perform an efficient transformation of a large, sparse 2D matrix into Compressed Sparse Row (CSR) format, written in C, using OpenMP for parallelism.
 The first aspect of the project was parallelized generation of a large n x n sparse matrix filled with 0s and 1s using a probability p, where p ∈ {0.05, 0.2, 0.5}.
 Then, there is an efficient transformation of the matrix into CSR format.
@@ -148,7 +143,6 @@ _CSR.pdf_
 Contains details regarding different test cases showing the input and the resulting output.
 
 **Project 5:**
-
 This project explores a parallel speculative approach to the regular expression matching problem using Deterministic Finite Automata (DFA) in C with OpenMP. It is designed to improve performance for very large string processing. The approach simulates real-world high-throughput data scanning.
 Regular expression matching is usually sequential because each character's effect depends on the previous DFA state. 
 However, dividing the input string and processing segments speculatively, enables threads to assume any possible starting state, and pre-processes its segment for all possibilities, producing a state transition map. 
