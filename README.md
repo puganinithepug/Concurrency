@@ -142,27 +142,3 @@ _The output components are:_
 _CSR.pdf_
 Contains details regarding different test cases showing the input and the resulting output.
 
-**Project 5:**
-This project explores a parallel speculative approach to the regular expression matching problem using Deterministic Finite Automata (DFA) in C with OpenMP. It is designed to improve performance for very large string processing. The approach simulates real-world high-throughput data scanning.
-Regular expression matching is usually sequential because each character's effect depends on the previous DFA state. 
-However, dividing the input string and processing segments speculatively, enables threads to assume any possible starting state, and pre-processes its segment for all possibilities, producing a state transition map. 
-After all segments are processed, the DFA path is reconstructed sequentially.
-
-_Regular_Expression_Matching.c_
-Compiles and runs as ./dfa_match <t> <n> where
-⦁	t: number of speculative threads (0–4)
-⦁	n: length of string (> t)
-Thus, as input the program takes a random numeric string (digits 0–9), of size n, divided among t threads.
-The first thread proceeds deterministically from the start state.
-All other threads process their segments in parallel for each possible starting DFA state, building transition tables.
-Final DFA state is computed by composing transitions from all segments.
-
-_The output of the execution is:_
-⦁	Print out of the input string
-⦁	A boolean determining whether the DFA ends in an accepting state (true/false)
-⦁	Time taken to execute in milliseconds (excluding string generation)
-
-_Regular_Expression_Matching.pdf_
-Results show speedup vs sequential execution and highlight trade-offs of speculative techniques. 
-Execution is averaged across 10 runs per thread configuration (t = 0 to 4).
-
